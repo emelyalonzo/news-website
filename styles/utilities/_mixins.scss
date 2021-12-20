@@ -1,0 +1,13 @@
+@mixin fullContainer() {
+    max-width: 100vw;
+    min-height: 90vh;
+}
+
+@mixin flexCenter($direction,$justify,$alignI,$alignC,$wrap) {
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignI;
+    align-content: $alignC;
+    flex-wrap: $wrap;
+}
