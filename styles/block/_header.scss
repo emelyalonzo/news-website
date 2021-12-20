@@ -1,0 +1,4 @@
+header {
+    background-color: white;
+    @include flexCenter(column, center, center, center, nowap); 
+}

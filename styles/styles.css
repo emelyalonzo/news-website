@@ -1,5 +1,93 @@
 /*This size or smaller*/
+header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: nowap;
+      flex-wrap: nowap;
+}
+
+.home {
+  padding: 2rem;
+  display: -ms-grid;
+  display: grid;
+  background-color: aquamarine;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.home img {
+  height: auto;
+  width: 100%;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.home__text {
+  padding: 0.5rem 1.5rem;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.home__text__title h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.home__text__title p {
+  margin: 0;
+}
+
+.home__extra {
+  padding: 0.5rem;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 4;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.home__extra__unit {
+  margin: 0;
+  padding: 0;
+}
+
+.home__extra__unit ul {
+  margin: 0.5rem;
+  list-style: outside;
+}
+
+.home__extra__unit ul li {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 body {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /*# sourceMappingURL=styles.css.map */
