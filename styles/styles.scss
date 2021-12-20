@@ -1,6 +1,10 @@
 @import './utilities/mixins';
 @import './utilities/responsive';
 
+@import './block/header';
+@import './block/home';
+
 body {
     margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
