@@ -1,4 +1,10 @@
 header {
     background-color: white;
     @include flexCenter(column, center, center, center, nowap); 
+    h1 {
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+        
 }
