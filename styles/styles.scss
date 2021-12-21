@@ -3,8 +3,17 @@
 
 @import './block/header';
 @import './block/home';
+@import './block/gallery';
+@import './block/extraNews';
+@import './block/features';
+
 
 body {
     margin:0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    width: fit-content;
+    @include mobile {
+        padding: 1rem;
+    }
 }
