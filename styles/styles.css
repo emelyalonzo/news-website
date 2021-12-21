@@ -235,6 +235,14 @@ header {
   grid-auto-rows: minmax(100px, auto);
 }
 
+@media screen and (max-width: 768px) {
+  .galleryBox {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+  }
+}
+
 .galleryBox .gallery {
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -254,6 +262,9 @@ header {
   max-height: 100%;
   padding: 0.5rem;
   margin: 0;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: minmax(50px, auto);
 }
 
 .galleryBox .gallery__unit img {
@@ -268,23 +279,6 @@ header {
 
 .galleryBox .gallery__unit__text {
   height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -ms-grid-row: 3;
       grid-row-start: 3;
   grid-row-end: 5;
@@ -295,8 +289,24 @@ header {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 768px) {
+  .galleryBox .gallery__unit__text__title h2 {
+    font-size: 1rem;
+  }
+}
+
 .galleryBox .gallery__unit__text__title p {
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .galleryBox .gallery__unit__text__title p {
+    font-size: 0.8rem;
+  }
+}
+
+.galleryBox .gallery__unit__text__date p {
+  font-size: 0.7rem;
 }
 
 .extraNews {
@@ -305,6 +315,14 @@ header {
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(50px, auto);
+}
+
+@media screen and (max-width: 768px) {
+  .extraNews {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(30px, auto);
+  }
 }
 
 .extraNews__unit {
@@ -398,6 +416,12 @@ body {
 @media screen and (max-width: 450px) {
   body {
     padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1.5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

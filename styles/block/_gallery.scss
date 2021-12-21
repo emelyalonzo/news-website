@@ -3,6 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(100px, auto);
+    @include tablet {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(50px, auto);
+    }
     .gallery{
         grid-column-start: 1;
         grid-column-end: 4;
@@ -16,6 +20,8 @@
             max-height: 100%;
             padding: 0.5rem;
             margin: 0;
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(50px, auto);
             img {
                 height: 50%;
                 width: 100%;
@@ -25,16 +31,26 @@
             }
             &__text {
                 height: 50%;
-                @include flexCenter(column, space-between, flex-start, space-between, nowrap);
                 grid-row-start: 3;
                 grid-row-end: 5;
                 &__title {
                     h2 {
                         margin: 0.1rem;
                         font-size: 1.2rem;
+                        @include tablet {
+                            font-size: 1rem;
+                        }
                     }
                     p {
                         margin: 0;
+                        @include tablet {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                &__date {
+                    p {
+                        font-size: 0.7rem;
                     }
                 }
             }
