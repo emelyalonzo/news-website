@@ -2,6 +2,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(50px, auto);
+    @include tablet {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(30px, auto);
+    }
     &__unit {
         max-width: 100%;
         height: auto;
@@ -11,15 +15,80 @@
             height: 50%;
             width: 100%;
             object-fit: cover;
-            grid-row-start: 1;
-            grid-row-end: 3;
         }
         &__text {
             &__title {
                 h2 {
                     margin: 0;
                     font-size: 1.1rem;
+                    @include mobile {
+                        font-size: 0.6rem;
+                    }
+                    @include tablet {
+                        font-size: 0.8rem;
+                    }
                 }
+            }
+            &__date {
+                p {
+                    font-size: 1rem;
+                    @include mobile {
+                        font-size: 0.5rem;
+                    }
+                    @include tablet {
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+        &__1 {
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+        }
+        &__2 {
+            @include tablet {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+        }
+        &__3 {
+            @include tablet {
+                grid-column-start: 5;
+                grid-column-end: 7;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+        }
+        &__4 {
+            img {
+                @include tablet {
+                   display: none;
+                }
+            }
+            @include tablet {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+        }
+        &__5 {
+            img {
+                @include tablet {
+                   display: none;
+                }
+            }
+            @include tablet {
+                grid-column-start: 4;
+                grid-column-end: 7;
+                grid-row-start: 2;
+                grid-row-end: 3;
             }
         }
     }
